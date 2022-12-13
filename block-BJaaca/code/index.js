@@ -1,6 +1,32 @@
 //  Follow instructions below and write code accordingly.
 
 //  - Create a variable named `character` using `let` assign a value of empty object.
+let age = 20;
+let character = {
+    characterName: "Arya",
+    'charecter-age': age,
+    "sur name": "Stark",
+    title: "Lady of Winterfell",
+    isFemale: true,
+    greet: function(){
+        alert(`She is ${character.characterName} and her title is ${character.title}`) 
+    },
+    isAdult: age>18?true:false,
+    changeIsAdult: function(){
+        if(this.isAdult===true){
+            return false;
+        }else{
+            return true;
+        }
+    },
+    ["playedBy"]: "Maise Williams",
+    totalSeasons: 1+2+3+2
+}
+
+
+
+
+
 
 //  - Go to this [Arya Stark](https://awoiaf.westeros.org/index.php/Arya_Stark)
 
@@ -8,7 +34,7 @@
 
 // - A variable named `age` is predefined with value 20. Add a new key named `character-age` with the value of `age` variable i.e 20 (don't use the value 20)
 
-let age = 20;
+
 
 // - Add a new key `sur name` with the value of the surname of the character i.e "Stark". (Don't remove the space between `sur` and `name`)
 
@@ -31,6 +57,8 @@ let age = 20;
 // - Add a new key with the name stored in variable `keyName` defined below i.e `playedBy` (use [] for computed property) and the value of "Maisie Williams"
 
 let keyName = 'playedBy';
+
+alert(character.playedBy);
 
 // - Using `alert` alert the value stored in key you added above `keyName` use the variable name to access
 
