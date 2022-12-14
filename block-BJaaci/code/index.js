@@ -66,13 +66,13 @@ console.log(movies[0].genres[2]);
 // 17. Log the first genres of the second movie (using the length property of array)
 console.log(movies[1].genres[0]);
 // 18. Log all the genres of the first movie one by one
-console.log(movies[0].genres[0]);
-console.log(movies[0].genres[1]);
-console.log(movies[0].genres[2]);
+for(genre of movies[0].genres){
+  console.log(genre);
+}
 // 19. Log all the genres of the second movie one by one
-console.log(movies[1].genres[0]);
-console.log(movies[1].genres[1]);
-console.log(movies[1].genres[2]);
+for(genre of movies[1].genres){
+  console.log(genre);
+}
 // 20. Log if the first actor of the first movie is `Rachel McAdams` or not (You have to log true or false)
 if (movies[0].actors[0] == "Rachel McAdams") {
   console.log(true);
@@ -83,27 +83,27 @@ if (movies[1].actors[1] == "Natalie Portman") {
 }else {console.log(false);
 }
 // 22. Log if the year of all three movies is greater than `2017` or not one by one. (Log true or false)
-if (movies[0].year > 2017 && movies[1].year > 2017 && movies[2].year > 2017) {
-  console.log(true);
-}else{
-  console.log(false);
+for (let i = 0; i < movies.length; i++) {
+  if (movies[i].year > 2017) {
+    console.log(true);
+  }else{
+    console.log(false);
+  }
 }
 // 23. Log the title of all three movies one by one.
-console.log(movies[0].title);
-console.log(movies[1].title);
-console.log(movies[2].title);
-// 24. Log if the title of the first movie is `Hannah` or not
-if(movies[0].title == "Hannah"){
-  console.log("The title of the movie is hannah");
-}else{
-  console.log("it is not hannah");
+for (let i = 0; i < movies.length; i++) {
+  console.log(movies[i].title)
 }
+// 24. Log if the title of the first movie is `Hannah` or not
+console.log(movies[0].title == "Hannah")
 // 25. Log the number of actors in all three movies one by one
-console.log(movies[0].actors);
-console.log(movies[1].actors);
-console.log(movies[2].actors);
+for (let movie of movies) {
+  console.log(movie.actors);
+}
 // 26. Log the number of genres in all three movies one by one
-console.log(movies[0].genres, movies[1].genres, movies[2].genres);
+for (let movie of movies) {
+  console.log(movie.genres);
+}
 
 // 27. Log the name of all the movies with more than 1 genre
 for (let i = 0; i < movies.length; i++) {
