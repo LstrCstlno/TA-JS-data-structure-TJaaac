@@ -47,7 +47,7 @@ while (arr.length< num) {
   arr.push(string);
   i++
 }
-console.log(arr);
+return arr;
 }
 
 // Uncomment the code below and test the output
@@ -71,9 +71,12 @@ console.log(times(5)); // ['test', 'test', 'test', 'test', 'test']
 */
 
 function revert(arr) {
-return arr.reverse();
+  final = [];
+for(i = arr.length-1; i >=0; i--){
+final.push(arr[i]);
 }
-
+return final;
+}
 // Uncomment the code below and test the output
 console.log(revert([1, 2, 3, 4])); // [4, 3, 2, 1]
 console.log(revert(['a', 'd', 'c', 'b'])); // ['b', 'c', 'd', 'a']
@@ -93,14 +96,15 @@ console.log(revert(['Ryan', 'John', 'Bran'])); //['Bran', 'John', 'Ryan']
 */
 
 function clear(array) {
+let final = [];
 for (let i = 0; i < array.length; i++) {
-  if(Boolean(array[i]) == false)
-    delete array[i];
+  if(Boolean(array[i]) == true)
+    final.push(array[i]);
   }
-  return array.reverse();
+  return final;
 }
 
-
+// if(array[i] == false || array[i] == undefined  ||array[i] == "" ||array[i] == 0  ||array[i] == null)
 
 // Uncomment the code below and test the output
 console.log(clear([1, 2, 3, 4, '', 0, null, undefined])); // [4, 3, 2, 1]
@@ -122,9 +126,11 @@ console.log(clear(['Ryan', null, 0, 'John', 'Bran'])); //['Bran', 'John', 'Ryan'
 */
 
 function arrayToObj(arr) {
-  for (let arrs of arr) {
-    return Object.assign({}, arr);
+  let final = {};
+  for (let i=0; i<arr.length ; i++) {
+    final[i] = arr[i];
   }
+  return final;
 }
 
 // Uncomment the code below and test the output
